@@ -16,7 +16,6 @@ public enum Effet {
         return code;
     }
 
-    // Trouver une valeur d'Effet par son code
     public static Effet fromCode(String code) {
         for (Effet effet : Effet.values()) {
             if (effet.getCode().equals(code)) {
