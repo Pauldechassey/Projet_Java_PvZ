@@ -1,12 +1,13 @@
 package com.epf.controller;
 
-import com.epf.repository.PlanteRepository;
+import java.util.List;
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Map;
+import com.epf.model.Plante;
+import com.epf.repository.PlanteRepository;
 
 @RestController
 @RequestMapping("/plante")
@@ -19,7 +20,7 @@ public class PlanteController {
     }
 
     @GetMapping
-    public List<Map<String, Object>> getPlantes() {
-        return planteRepository.findAllPlante();
+    public List<Plante> getPlantes() {
+        return planteRepository.findAll(); // Utilisation de findAll() au lieu de findAllPlante()
     }
 }

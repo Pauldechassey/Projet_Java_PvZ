@@ -1,37 +1,48 @@
 package com.epf.repository;
 
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
 
-import java.util.List;
-import java.util.Map;
+import com.epf.model.Plante;
 
 @Repository
-public class PlanteRepository {
-
+public class PlanteRepository implements PlanteDAO {
     private final JdbcTemplate jdbcTemplate;
 
     public PlanteRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public List<Map<String, Object>> findAllPlante() {
-        String sql = "SELECT * FROM plante";
-        return jdbcTemplate.queryForList(sql);
+    @Override
+    public List<Plante> findAll() {
+        return jdbcTemplate.query("SELECT * FROM Plante", new BeanPropertyRowMapper<>(Plante.class));
     }
 
-    public List<Map<String, Object>> findPlanteById(int id) {
-        String sql = "SELECT * FROM plante WHERE id = ?";
-        return jdbcTemplate.queryForList(sql, id);
+
+    @Override
+    public Optional<Plante> findById(int id) {
+        return jdbcTemplate.query("SELECT * FROM Plante WHERE id = ?", new BeanPropertyRowMapper<>(Plante.class), id)
+                .stream().findFirst();
     }
 
-    public void createPlante(String nom, String description, String image) {
-        String sql = "INSERT INTO plante (nom, description, image) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, nom, description, image);
+    @Override
+    public void save(Plante plante) {
+        jdbcTemplate.update("INSERT INTO Plante (nom, point_de_vie, attaque_par_seconde, degat_attaque, cout, soleil_par_seconde, effet, chemin_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                plante.getNom(), plante.getPoint_de_vie(), plante.getAttaque_par_seconde(), plante.getDegat_attaque(), plante.getCout(), plante.getSoleil_par_seconde(), plante.getEffet(), plante.getChemin_image());
     }
 
-    public void updatePlante(int id, String nom, String description, String image) {
-        String sql = "UPDATE plante SET nom = ?, description = ?, image = ? WHERE id = ?";
-        jdbcTemplate.update(sql, nom, description, image, id);
+    @Override
+    public void update(Plante plante) {
+        jdbcTemplate.update("UPDATE Plante SET nom = ?, point_de_vie = ?, attaque_par_seconde = ?, degat_attaque = ?, cout = ?, soleil_par_seconde = ?, effet = ?, chemin_image = ? WHERE id = ?",
+                plante.getNom(), plante.getPoint_de_vie(), plante.getAttaque_par_seconde(), plante.getDegat_attaque(), plante.getCout(), plante.getSoleil_par_seconde(), plante.getEffet(), plante.getChemin_image(), plante.getId());
+    }
+
+    @Override
+    public void delete(int id) {
+        jdbcTemplate.update("DELETE FROM Plante WHERE id = ?", id);
     }
 }
