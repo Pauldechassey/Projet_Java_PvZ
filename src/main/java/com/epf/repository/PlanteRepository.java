@@ -22,11 +22,16 @@ public class PlanteRepository implements PlanteDAO {
         return jdbcTemplate.query("SELECT * FROM Plante", new BeanPropertyRowMapper<>(Plante.class));
     }
 
-
     @Override
     public Optional<Plante> findById(int id) {
         return jdbcTemplate.query("SELECT * FROM Plante WHERE id = ?", new BeanPropertyRowMapper<>(Plante.class), id)
                 .stream().findFirst();
+    }
+
+    @Override
+    public void create(Plante plante) {
+        jdbcTemplate.update("INSERT INTO Plante (nom, point_de_vie, attaque_par_seconde, degat_attaque, cout, soleil_par_seconde, effet, chemin_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
+                plante.getNom(), plante.getPoint_de_vie(), plante.getAttaque_par_seconde(), plante.getDegat_attaque(), plante.getCout(), plante.getSoleil_par_seconde(), plante.getEffet(), plante.getChemin_image());
     }
 
     @Override

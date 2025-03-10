@@ -1,30 +1,48 @@
 package com.epf.repository;
 
 import java.util.List;
-import java.util.Map;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
 
-public class MapRepository {
+import com.epf.model.Map;
+
+@Repository
+public class MapRepository implements MapDAO {
+
     private final JdbcTemplate jdbcTemplate;
 
     public MapRepository(JdbcTemplate jdbcTemplate) {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    public void createMap(int ligne, int colonne, String chemin_image) {
-        String sql = "INSERT INTO map (ligne, colonne, chemin_image) VALUES (?, ?, ?)";
-        jdbcTemplate.update(sql, ligne, colonne, chemin_image);
-    }
-    
-    public List<Map<String, Object>> findAllMaps() {
-        String sql = "SELECT * FROM Map";
-        return jdbcTemplate.queryForList(sql);
+    @Override
+    public List<Map> findAll() {
+        return jdbcTemplate.query("SELECT * FROM Map", new BeanPropertyRowMapper<>(Map.class));
     }
 
-    public Map<String, Object> findMapById(int id) {
+    @Override
+    public Map findById(int id) {
         String sql = "SELECT * FROM Map WHERE id = ?";
-        return jdbcTemplate.queryForMap(sql, id);
+        return jdbcTemplate.queryForObject(sql, new BeanPropertyRowMapper<>(Map.class), id);
     }
 
+    @Override
+    public void create(Map map) {
+        String sql = "INSERT INTO Map (ligne, colonne, chemin_image) VALUES (?, ?, ?)";
+        jdbcTemplate.update(sql, map.getLigne(), map.getColonne(), map.getChemin_image());
+    }
+
+    @Override
+    public void update(Map map) {
+        String sql = "UPDATE Map SET ligne = ?, colonne = ?, chemin_image = ? WHERE id = ?";
+        jdbcTemplate.update(sql, map.getLigne(), map.getColonne(), map.getChemin_image(), map.getId_map());
+    }
+
+    @Override
+    public void delete(int id) {
+        String sql = "DELETE FROM Map WHERE id = ?";
+        jdbcTemplate.update(sql, id);
+    }
 }
