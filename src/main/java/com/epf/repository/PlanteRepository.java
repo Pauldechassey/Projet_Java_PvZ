@@ -30,8 +30,7 @@ public class PlanteRepository implements PlanteDAO {
 
     @Override
     public void create(Plante plante) {
-        jdbcTemplate.update("INSERT INTO Plante (nom, point_de_vie, attaque_par_seconde, degat_attaque, cout, soleil_par_seconde, effet, chemin_image) VALUES (?, ?, ?, ?, ?, ?, ?, ?)",
-                plante.getNom(), plante.getPoint_de_vie(), plante.getAttaque_par_seconde(), plante.getDegat_attaque(), plante.getCout(), plante.getSoleil_par_seconde(), plante.getEffet(), plante.getChemin_image());
+        save(plante);
     }
 
     @Override
