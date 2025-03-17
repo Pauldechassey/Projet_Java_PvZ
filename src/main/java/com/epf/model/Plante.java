@@ -17,7 +17,6 @@ public class Plante {
     public Plante(int id, String nom, int point_de_vie, int attaque_par_seconde,
             int degat_attaque, int cout, float soleil_par_seconde,
             Effet effet, String chemin_image) {
-        this.id = id;
         this.nom = nom;
         this.point_de_vie = point_de_vie;
         this.attaque_par_seconde = attaque_par_seconde;
@@ -29,6 +28,10 @@ public class Plante {
     }
 
     // Getters et Setters
+    public Plante getPlante() {
+        return this;
+    }
+
     public int getId() {
         return id;
     }
@@ -38,7 +41,7 @@ public class Plante {
     }
 
     public String getNom() {
-        return nom;
+        return this.nom;
     }
 
     public void setNom(String nom) {
@@ -46,7 +49,7 @@ public class Plante {
     }
 
     public int getPoint_de_vie() {
-        return point_de_vie;
+        return this.point_de_vie;
     }
 
     public void setPoint_de_vie(int point_de_vie) {
@@ -54,7 +57,7 @@ public class Plante {
     }
 
     public int getAttaque_par_seconde() {
-        return attaque_par_seconde;
+        return this.attaque_par_seconde;
     }
 
     public void setAttaque_par_seconde(int attaque_par_seconde) {
@@ -62,7 +65,7 @@ public class Plante {
     }
 
     public int getDegat_attaque() {
-        return degat_attaque;
+        return this.degat_attaque;
     }
 
     public void setDegat_attaque(int degat_attaque) {
@@ -70,7 +73,7 @@ public class Plante {
     }
 
     public int getCout() {
-        return cout;
+        return this.cout;
     }
 
     public void setCout(int cout) {
@@ -78,7 +81,7 @@ public class Plante {
     }
 
     public float getSoleil_par_seconde() {
-        return soleil_par_seconde;
+        return this.soleil_par_seconde;
     }
 
     public void setSoleil_par_seconde(float soleil_par_seconde) {
@@ -86,7 +89,7 @@ public class Plante {
     }
 
     public Effet getEffet() {
-        return effet;
+        return this.effet;
     }
 
     public void setEffet(Effet effet) {
@@ -94,7 +97,7 @@ public class Plante {
     }
 
     public String getChemin_image() {
-        return chemin_image;
+        return this.chemin_image;
     }
 
     public void setChemin_image(String chemin_image) {
@@ -104,15 +107,15 @@ public class Plante {
     @Override
     public String toString() {
         return "Plante{" +
-                "id=" + id +
-                ", nom='" + nom + '\'' +
-                ", point_de_vie=" + point_de_vie +
-                ", attaque_par_seconde=" + attaque_par_seconde +
-                ", degat_attaque=" + degat_attaque +
-                ", cout=" + cout +
-                ", soleil_par_seconde=" + soleil_par_seconde +
-                ", effet=" + effet +
-                ", chemin_image='" + chemin_image + '\'' +
+                "id=" + this.id +
+                ", nom='" + this.nom + '\'' +
+                ", point_de_vie=" + this.point_de_vie +
+                ", attaque_par_seconde=" + this.attaque_par_seconde +
+                ", degat_attaque=" + this.degat_attaque +
+                ", cout=" + this.cout +
+                ", soleil_par_seconde=" + this.soleil_par_seconde +
+                ", effet=" + this.effet +
+                ", chemin_image='" + this.chemin_image + '\'' +
                 '}';
     }
 }

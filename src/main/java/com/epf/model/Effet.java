@@ -13,7 +13,7 @@ public enum Effet {
     }
 
     public String getCode() {
-        return code;
+        return this.code;
     }
 
     public static Effet fromCode(String code) {
@@ -27,6 +27,6 @@ public enum Effet {
 
     @Override
     public String toString() {
-        return code;
+        return this.code;
     }
 }

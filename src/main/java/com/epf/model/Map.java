@@ -11,15 +11,18 @@ public class Map {
     }
 
     public Map(int id_map, int ligne, int colonne, String chemin_image) {
-        this.id_map = id_map;
         this.ligne = ligne;
         this.colonne = colonne;
         this.chemin_image = chemin_image;
     }
 
     // Getters et Setters
+    public Map getMap() {
+        return this;
+    }
+
     public int getId_map() {
-        return id_map;
+        return this.id_map;
     }
 
     public void setId_map(int id_map) {
@@ -27,7 +30,7 @@ public class Map {
     }
 
     public int getLigne() {
-        return ligne;
+        return this.ligne;
     }
 
     public void setLigne(int ligne) {
@@ -35,7 +38,7 @@ public class Map {
     }
 
     public int getColonne() {
-        return colonne;
+        return this.colonne;
     }
 
     public void setColonne(int colonne) {
@@ -43,7 +46,7 @@ public class Map {
     }
 
     public String getChemin_image() {
-        return chemin_image;
+        return this.chemin_image;
     }
 
     public void setChemin_image(String chemin_image) {
@@ -53,10 +56,10 @@ public class Map {
     @Override
     public String toString() {
         return "Map{" +
-                "id_map=" + id_map +
-                ", ligne=" + ligne +
-                ", colonne=" + colonne +
-                ", chemin_image='" + chemin_image + '\'' +
+                "id_map=" + this.id_map +
+                ", ligne=" + this.ligne +
+                ", colonne=" + this.colonne +
+                ", chemin_image='" + this.chemin_image + '\'' +
                 '}';
     }
 

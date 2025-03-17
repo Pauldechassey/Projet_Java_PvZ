@@ -10,5 +10,5 @@ public interface ZombieDAO {
     void create(Zombie zombie);
     void update(Zombie zombie);
     void delete(int id);
-    List<Zombie> findByMapId(int mapId); // Récupérer les zombies par carte
+    List<Zombie> findByMapId(int mapId); 
 }
