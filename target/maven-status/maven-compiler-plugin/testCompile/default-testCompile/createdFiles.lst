@@ -1,1 +1,5 @@
-com\epf\repository\TestZombieDAO.class
+com\epf\Testdao\TestZombieDAO.class
+com\epf\config\DatabaseConnectionTest.class
+com\epf\config\TestConfig.class
+com\epf\Testdao\TestMapDAO.class
+com\epf\Testdao\TestPlanteDAO.class

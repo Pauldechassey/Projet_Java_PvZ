@@ -1,7 +1,7 @@
 package com.epf.dto;
 
-import com.epf.model.Plante;
 import com.epf.model.Effet;
+import com.epf.model.Plante;
 
 public class PlanteDTO {
 

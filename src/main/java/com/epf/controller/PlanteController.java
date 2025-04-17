@@ -40,14 +40,13 @@ public class PlanteController {
 
     @PostMapping
     public void createPlante(@RequestBody PlanteDTO planteDTO) {
-        Plante plante = planteDTO.toEntity();
-        planteService.create(plante);
+        planteService.create(planteDTO.toEntity());
     }
 
     @PutMapping("/{id}")
     public void updatePlante(@PathVariable int id, @RequestBody PlanteDTO planteDTO) {
         Plante plante = planteDTO.toEntity();
-        plante.setId(id); 
+        plante.setId(id);
         planteService.update(plante);
     }
 
