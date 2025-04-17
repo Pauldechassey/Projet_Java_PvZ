@@ -2,6 +2,7 @@ package com.epf.dto;
 
 import com.epf.model.Effet;
 import com.epf.model.Plante;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PlanteDTO {
 
@@ -12,7 +13,10 @@ public class PlanteDTO {
     private int degat_attaque;
     private int cout;
     private float soleil_par_seconde;
+    
+    @JsonProperty("effet")
     private Effet effet;
+    
     private String chemin_image;
 
     public PlanteDTO() {

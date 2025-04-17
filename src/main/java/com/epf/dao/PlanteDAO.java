@@ -24,7 +24,7 @@ public class PlanteDAO {
             plante.setNom(rs.getString("nom"));
             plante.setPoint_de_vie(rs.getInt("point_de_vie"));
             plante.setDegat_attaque(rs.getInt("degat_attaque"));
-            plante.setCout(rs.getInt("cout_soleil"));
+            plante.setCout(rs.getInt("cout"));
             plante.setChemin_image(rs.getString("chemin_image"));
             return plante;
         });
@@ -38,14 +38,14 @@ public class PlanteDAO {
             plante.setNom(rs.getString("nom"));
             plante.setPoint_de_vie(rs.getInt("point_de_vie"));
             plante.setDegat_attaque(rs.getInt("degat_attaque"));
-            plante.setCout(rs.getInt("cout_soleil"));
+            plante.setCout(rs.getInt("cout"));
             plante.setChemin_image(rs.getString("chemin_image"));
             return plante;
         }, id);
     }
 
     public void create(Plante plante) {
-        String sql = "INSERT INTO plante (nom, point_de_vie, degat_attaque, cout_soleil, chemin_image) VALUES (?, ?, ?, ?, ?)";
+        String sql = "INSERT INTO plante (nom, point_de_vie, degat_attaque, cout, chemin_image) VALUES (?, ?, ?, ?, ?)";
         jdbcTemplate.update(sql,
             plante.getNom(),
             plante.getPoint_de_vie(),
@@ -56,7 +56,7 @@ public class PlanteDAO {
     }
 
     public void update(Plante plante) {
-        String sql = "UPDATE plante SET nom = ?, point_de_vie = ?, degat_attaque = ?, cout_soleil = ?, chemin_image = ? WHERE id_plante = ?";
+        String sql = "UPDATE plante SET nom = ?, point_de_vie = ?, degat_attaque = ?, cout = ?, chemin_image = ? WHERE id_plante = ?";
         jdbcTemplate.update(sql,
             plante.getNom(),
             plante.getPoint_de_vie(),

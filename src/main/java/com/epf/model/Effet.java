@@ -1,32 +1,17 @@
 package com.epf.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public enum Effet {
-    NORMAL("normal"),
-    SLOW_LOW("slow_low"),
-    SLOW_MEDIUM("slow_medium"),
-    SLOW_STOP("slow_stop");
-
-    private final String code;
-
-    Effet(String code) {
-        this.code = code;
-    }
-
-    public String getCode() {
-        return this.code;
-    }
-
-    public static Effet fromCode(String code) {
-        for (Effet effet : Effet.values()) {
-            if (effet.getCode().equals(code)) {
-                return effet;
-            }
-        }
-        throw new IllegalArgumentException("Code d'effet inconnu: " + code);
-    }
-
-    @Override
-    public String toString() {
-        return this.code;
-    }
+    @JsonProperty("normal")
+    NORMAL,
+    
+    @JsonProperty("slow_low")
+    SLOW_LOW,
+    
+    @JsonProperty("slow_medium")
+    SLOW_MEDIUM,
+    
+    @JsonProperty("slow_stop")
+    SLOW_STOP
 }

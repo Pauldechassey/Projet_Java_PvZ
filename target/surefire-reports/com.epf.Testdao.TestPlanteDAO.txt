@@ -1,24 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.epf.Testdao.TestPlanteDAO
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.044 s <<< FAILURE! - in com.epf.Testdao.TestPlanteDAO
-testFindAll  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestPlanteDAO': Unsatisfied dependency expressed through field 'planteDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testFindById  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestPlanteDAO': Unsatisfied dependency expressed through field 'planteDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testCreate  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestPlanteDAO': Unsatisfied dependency expressed through field 'planteDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testDelete  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestPlanteDAO': Unsatisfied dependency expressed through field 'planteDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testUpdate  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestPlanteDAO': Unsatisfied dependency expressed through field 'planteDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.PlanteDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.552 s - in com.epf.Testdao.TestPlanteDAO

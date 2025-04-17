@@ -60,7 +60,12 @@ public class MapDAO {
     }
 
     public void delete(int id) {
-        String sql = "DELETE FROM map WHERE id_map = ?";
-        jdbcTemplate.update(sql, id);
+        // D'abord supprimer les zombies liés à cette map
+        String deleteZombiesSQL = "DELETE FROM zombie WHERE id_map = ?";
+        jdbcTemplate.update(deleteZombiesSQL, id);
+
+        // Ensuite supprimer la map
+        String deleteMapSQL = "DELETE FROM map WHERE id_map = ?";
+        jdbcTemplate.update(deleteMapSQL, id);
     }
 }

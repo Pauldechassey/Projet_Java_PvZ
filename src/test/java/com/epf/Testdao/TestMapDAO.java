@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 
 import com.epf.config.TestConfig;
 import com.epf.dao.MapDAO;
@@ -15,7 +14,6 @@ import com.epf.model.Map;
 
 @SpringBootTest
 @ContextConfiguration(classes = TestConfig.class)
-@TestPropertySource(locations = "classpath:application-test.properties")
 public class TestMapDAO {
     
     @Autowired
@@ -53,5 +51,12 @@ public class TestMapDAO {
     @Test
     public void testDelete() {
         mapDAO.delete(1);
+    }
+
+    @Test
+    public void testDatabaseConnection() {
+        // Simple query to verify connection
+        List<Map> maps = mapDAO.findAll();
+        System.out.println("Successfully connected to database and found " + maps.size() + " maps");
     }
 }

@@ -7,7 +7,6 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestPropertySource;
 
 import com.epf.config.TestConfig;
 import com.epf.dao.ZombieDAO;
@@ -15,7 +14,6 @@ import com.epf.model.Zombie;
 
 @SpringBootTest
 @ContextConfiguration(classes = TestConfig.class)
-@TestPropertySource(locations = "classpath:application-test.properties")
 public class TestZombieDAO {
     
     @Autowired

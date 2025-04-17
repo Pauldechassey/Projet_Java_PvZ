@@ -1,24 +1,10 @@
 -------------------------------------------------------------------------------
 Test set: com.epf.Testdao.TestMapDAO
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 5, Skipped: 0, Time elapsed: 0.182 s <<< FAILURE! - in com.epf.Testdao.TestMapDAO
-testFindAll  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestMapDAO': Unsatisfied dependency expressed through field 'mapDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testFindById  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestMapDAO': Unsatisfied dependency expressed through field 'mapDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testCreate  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestMapDAO': Unsatisfied dependency expressed through field 'mapDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testDelete  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestMapDAO': Unsatisfied dependency expressed through field 'mapDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-
-testUpdate  Time elapsed: 0 s  <<< ERROR!
-org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'com.epf.Testdao.TestMapDAO': Unsatisfied dependency expressed through field 'mapDAO'; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-Caused by: org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.epf.dao.MapDAO' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.845 s <<< FAILURE! - in com.epf.Testdao.TestMapDAO
+testDelete  Time elapsed: 0.637 s  <<< ERROR!
+org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [DELETE FROM map WHERE id_map = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`pvz`.`zombie`, CONSTRAINT `fk_zombie_map` FOREIGN KEY (`id_map`) REFERENCES `map` (`id_map`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`pvz`.`zombie`, CONSTRAINT `fk_zombie_map` FOREIGN KEY (`id_map`) REFERENCES `map` (`id_map`))
+	at com.epf.Testdao.TestMapDAO.testDelete(TestMapDAO.java:53)
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`pvz`.`zombie`, CONSTRAINT `fk_zombie_map` FOREIGN KEY (`id_map`) REFERENCES `map` (`id_map`))
+	at com.epf.Testdao.TestMapDAO.testDelete(TestMapDAO.java:53)
 
