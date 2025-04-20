@@ -46,7 +46,7 @@ public class MapController {
     @PutMapping("/{id}")
     public void updateMap(@PathVariable int id, @RequestBody MapDTO mapDTO) {
         Map map = mapDTO.toEntity();
-        map.setId_map(id); // On s'assure que l'ID vient bien du path
+        map.setId_map(id);
         mapService.update(map);
     }
 
