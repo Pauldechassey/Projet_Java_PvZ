@@ -1,7 +1,8 @@
 package com.epf.Testdto;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
+import org.junit.platform.commons.annotation.Testable;
 
 import com.epf.dto.PlanteDTO;
 import com.epf.model.Effet;
@@ -9,7 +10,7 @@ import com.epf.model.Plante;
 
 public class PlanteDTOTest {
 
-    @Test
+    @Testable
     public  void testDTOFromEntity() {
         Plante plante = new Plante();
         plante.setNom("NORMAL");  // Update test to expect uppercase

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.epf.Testcontroller.PlanteControllerTest" time="0.101" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.epf.Testcontroller.PlanteControllerTest" time="0.098" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,7 +15,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="FR"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\paul2\AppData\Local\Temp\surefire6786046358235354549\surefirebooter-20250428122814822_3.jar C:\Users\paul2\AppData\Local\Temp\surefire6786046358235354549 2025-04-28T12-28-14_715-jvmRun1 surefire-20250428122814822_1tmp surefire_0-20250428122814822_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\paul2\AppData\Local\Temp\surefire2378980391469702396\surefirebooter-20250428125012485_3.jar C:\Users\paul2\AppData\Local\Temp\surefire2378980391469702396 2025-04-28T12-50-12_406-jvmRun1 surefire-20250428125012485_1tmp surefire_0-20250428125012485_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\paul2\OneDrive\Documents\EPF 4A\Langage Java\Projet\target\test-classes;C:\Users\paul2\OneDrive\Documents\EPF 4A\Langage Java\Projet\target\classes;C:\Users\paul2\.m2\repository\org\springframework\spring-webmvc\6.2.2\spring-webmvc-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-aop\6.2.2\spring-aop-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-beans\6.2.2\spring-beans-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-core\6.2.2\spring-core-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-jcl\6.2.2\spring-jcl-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-expression\6.2.2\spring-expression-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-web\6.2.2\spring-web-6.2.2.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-context\6.1.13\spring-context-6.1.13.jar;C:\Users\paul2\.m2\repository\io\micrometer\micrometer-observation\1.12.10\micrometer-observation-1.12.10.jar;C:\Users\paul2\.m2\repository\io\micrometer\micrometer-commons\1.12.10\micrometer-commons-1.12.10.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-jdbc\6.1.5\spring-jdbc-6.1.5.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-tx\6.1.5\spring-tx-6.1.5.jar;C:\Users\paul2\.m2\repository\org\springframework\spring-test\6.1.5\spring-test-6.1.5.jar;C:\Users\paul2\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\paul2\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;C:\Users\paul2\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.0.0\jakarta.servlet-api-6.0.0.jar;C:\Users\paul2\.m2\repository\com\fasterxml\jackson\core\jackson-databind\2.18.2\jackson-databind-2.18.2.jar;C:\Users\paul2\.m2\repository\com\fasterxml\jackson\core\jackson-core\2.18.2\jackson-core-2.18.2.jar;C:\Users\paul2\.m2\repository\com\fasterxml\jackson\core\jackson-annotations\2.18.2\jackson-annotations-2.18.2.jar;C:\Users\paul2\.m2\repository\ch\qos\logback\logback-classic\1.2.12\logback-classic-1.2.12.jar;C:\Users\paul2\.m2\repository\ch\qos\logback\logback-core\1.2.12\logback-core-1.2.12.jar;C:\Users\paul2\.m2\repository\org\slf4j\slf4j-api\1.7.32\slf4j-api-1.7.32.jar;C:\Users\paul2\.m2\repository\org\mockito\mockito-core\4.11.0\mockito-core-4.11.0.jar;C:\Users\paul2\.m2\repository\net\bytebuddy\byte-buddy\1.12.19\byte-buddy-1.12.19.jar;C:\Users\paul2\.m2\repository\net\bytebuddy\byte-buddy-agent\1.12.19\byte-buddy-agent-1.12.19.jar;C:\Users\paul2\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\paul2\.m2\repository\org\mockito\mockito-junit-jupiter\4.11.0\mockito-junit-jupiter-4.11.0.jar;C:\Users\paul2\.m2\repository\com\jayway\jsonpath\json-path\2.7.0\json-path-2.7.0.jar;C:\Users\paul2\.m2\repository\net\minidev\json-smart\2.4.7\json-smart-2.4.7.jar;C:\Users\paul2\.m2\repository\net\minidev\accessors-smart\2.4.7\accessors-smart-2.4.7.jar;C:\Users\paul2\.m2\repository\org\ow2\asm\asm\9.1\asm-9.1.jar;C:\Users\paul2\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\paul2\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;C:\Users\paul2\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.9.3\junit-jupiter-api-5.9.3.jar;C:\Users\paul2\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\paul2\.m2\repository\org\junit\platform\junit-platform-commons\1.9.3\junit-platform-commons-1.9.3.jar;C:\Users\paul2\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\paul2\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.9.3\junit-jupiter-engine-5.9.3.jar;C:\Users\paul2\.m2\repository\org\junit\platform\junit-platform-engine\1.9.3\junit-platform-engine-1.9.3.jar;C:\Users\paul2\.m2\repository\org\junit\vintage\junit-vintage-engine\5.9.3\junit-vintage-engine-5.9.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -30,7 +30,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\paul2\AppData\Local\Temp\surefire6786046358235354549\surefirebooter-20250428122814822_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\paul2\AppData\Local\Temp\surefire2378980391469702396\surefirebooter-20250428125012485_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
@@ -58,139 +58,139 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testCreatePlante" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.041">
-    <system-out><![CDATA[12:28:17.055 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+  <testcase name="testCreatePlante" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.049">
+    <system-out><![CDATA[12:50:14.679 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
 	c.e.c.PlanteController:
-	{GET [/plantes/{id}]}: getPlanteById(int)
-	{GET [/plantes]}: getAllPlantes()
-	{POST [/plantes]}: createPlante(PlanteDTO)
 	{PUT [/plantes/{id}]}: updatePlante(int,PlanteDTO)
 	{DELETE [/plantes/{id}]}: deletePlante(int)
-12:28:17.056 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
-12:28:17.057 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-12:28:17.058 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-12:28:17.058 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
-12:28:17.058 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
-12:28:17.058 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
-12:28:17.058 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
-12:28:17.058 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@597d48ca
-12:28:17.058 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@77324a58
-12:28:17.058 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-12:28:17.058 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
-12:28:17.064 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/plantes", parameters={}
-12:28:17.064 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#createPlante(PlanteDTO)
-12:28:17.071 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.epf.dto.PlanteDTO@4703c998]
-12:28:17.071 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-12:28:17.071 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
-12:28:17.071 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+	{GET [/plantes/{id}]}: getPlanteById(int)
+	{POST [/plantes]}: createPlante(PlanteDTO)
+	{GET [/plantes]}: getAllPlantes()
+12:50:14.679 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+12:50:14.680 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+12:50:14.681 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+12:50:14.681 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:50:14.681 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+12:50:14.681 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+12:50:14.681 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+12:50:14.681 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@49232c6f
+12:50:14.681 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@5faeeb56
+12:50:14.681 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+12:50:14.681 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+12:50:14.688 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - POST "/plantes", parameters={}
+12:50:14.689 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#createPlante(PlanteDTO)
+12:50:14.694 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.epf.dto.PlanteDTO@61da0413]
+12:50:14.695 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:50:14.695 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
+12:50:14.695 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
 ]]></system-out>
   </testcase>
-  <testcase name="testGetAllPlantes" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.012">
-    <system-out><![CDATA[12:28:17.083 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+  <testcase name="testGetAllPlantes" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.01">
+    <system-out><![CDATA[12:50:14.703 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
 	c.e.c.PlanteController:
-	{GET [/plantes/{id}]}: getPlanteById(int)
-	{GET [/plantes]}: getAllPlantes()
-	{POST [/plantes]}: createPlante(PlanteDTO)
 	{PUT [/plantes/{id}]}: updatePlante(int,PlanteDTO)
 	{DELETE [/plantes/{id}]}: deletePlante(int)
-12:28:17.084 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
-12:28:17.085 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-12:28:17.085 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-12:28:17.085 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
-12:28:17.085 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
-12:28:17.085 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
-12:28:17.085 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
-12:28:17.085 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@5fb5ad40
-12:28:17.085 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@615439f7
-12:28:17.085 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-12:28:17.086 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
-12:28:17.087 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - GET "/plantes", parameters={}
-12:28:17.087 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#getAllPlantes()
-12:28:17.089 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-12:28:17.089 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[com.epf.dto.PlanteDTO@2315052d]]
-12:28:17.091 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
-12:28:17.091 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $[0]['id']
-12:28:17.091 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $[0]['nom']
+	{GET [/plantes/{id}]}: getPlanteById(int)
+	{POST [/plantes]}: createPlante(PlanteDTO)
+	{GET [/plantes]}: getAllPlantes()
+12:50:14.703 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+12:50:14.704 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+12:50:14.704 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+12:50:14.704 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:50:14.704 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+12:50:14.704 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+12:50:14.704 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+12:50:14.704 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@1de13f34
+12:50:14.704 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7e191fda
+12:50:14.704 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+12:50:14.704 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+12:50:14.705 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - GET "/plantes", parameters={}
+12:50:14.705 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#getAllPlantes()
+12:50:14.706 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:50:14.706 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [[com.epf.dto.PlanteDTO@3869a6e5]]
+12:50:14.708 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+12:50:14.708 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $[0]['id']
+12:50:14.708 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $[0]['nom']
 ]]></system-out>
   </testcase>
-  <testcase name="testGetPlanteById" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.013">
-    <system-out><![CDATA[12:28:17.096 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+  <testcase name="testGetPlanteById" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.014">
+    <system-out><![CDATA[12:50:14.713 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
 	c.e.c.PlanteController:
-	{GET [/plantes/{id}]}: getPlanteById(int)
-	{GET [/plantes]}: getAllPlantes()
-	{POST [/plantes]}: createPlante(PlanteDTO)
 	{PUT [/plantes/{id}]}: updatePlante(int,PlanteDTO)
 	{DELETE [/plantes/{id}]}: deletePlante(int)
-12:28:17.097 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
-12:28:17.098 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-12:28:17.098 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-12:28:17.098 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
-12:28:17.098 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
-12:28:17.098 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
-12:28:17.098 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
-12:28:17.098 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@62cf6a84
-12:28:17.098 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@204d9edf
-12:28:17.098 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-12:28:17.098 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
-12:28:17.100 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - GET "/plantes/1", parameters={}
-12:28:17.100 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#getPlanteById(int)
-12:28:17.105 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-12:28:17.105 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [com.epf.dto.PlanteDTO@625487a6]
-12:28:17.105 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
-12:28:17.105 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['id']
+	{GET [/plantes/{id}]}: getPlanteById(int)
+	{POST [/plantes]}: createPlante(PlanteDTO)
+	{GET [/plantes]}: getAllPlantes()
+12:50:14.713 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+12:50:14.714 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+12:50:14.715 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+12:50:14.715 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:50:14.715 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+12:50:14.715 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+12:50:14.715 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+12:50:14.715 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@578c3fd9
+12:50:14.715 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@245cb8df
+12:50:14.715 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+12:50:14.715 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+12:50:14.716 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - GET "/plantes/1", parameters={}
+12:50:14.716 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#getPlanteById(int)
+12:50:14.722 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:50:14.722 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Writing [com.epf.dto.PlanteDTO@251a90ce]
+12:50:14.722 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+12:50:14.722 [main] DEBUG com.jayway.jsonpath.internal.path.CompiledPath - Evaluating path: $['id']
 ]]></system-out>
   </testcase>
-  <testcase name="testUpdatePlante" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.015">
-    <system-out><![CDATA[12:28:17.113 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+  <testcase name="testUpdatePlante" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.011">
+    <system-out><![CDATA[12:50:14.727 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
 	c.e.c.PlanteController:
-	{GET [/plantes/{id}]}: getPlanteById(int)
-	{GET [/plantes]}: getAllPlantes()
-	{POST [/plantes]}: createPlante(PlanteDTO)
 	{PUT [/plantes/{id}]}: updatePlante(int,PlanteDTO)
 	{DELETE [/plantes/{id}]}: deletePlante(int)
-12:28:17.113 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
-12:28:17.113 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-12:28:17.113 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-12:28:17.113 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
-12:28:17.113 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
-12:28:17.113 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
-12:28:17.113 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
-12:28:17.113 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@74697863
-12:28:17.113 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7d7ceca8
-12:28:17.113 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-12:28:17.113 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
-12:28:17.113 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - PUT "/plantes/1", parameters={}
-12:28:17.113 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#updatePlante(int, PlanteDTO)
-12:28:17.113 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.epf.dto.PlanteDTO@26c7b1c6]
-12:28:17.120 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-12:28:17.120 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
-12:28:17.120 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+	{GET [/plantes/{id}]}: getPlanteById(int)
+	{POST [/plantes]}: createPlante(PlanteDTO)
+	{GET [/plantes]}: getAllPlantes()
+12:50:14.727 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+12:50:14.728 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+12:50:14.728 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+12:50:14.729 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:50:14.729 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+12:50:14.729 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+12:50:14.729 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+12:50:14.729 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@458031da
+12:50:14.729 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@7be94cd6
+12:50:14.729 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+12:50:14.729 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+12:50:14.731 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - PUT "/plantes/1", parameters={}
+12:50:14.731 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#updatePlante(int, PlanteDTO)
+12:50:14.732 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Read "application/json" to [com.epf.dto.PlanteDTO@463045fb]
+12:50:14.733 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:50:14.734 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
+12:50:14.734 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
 ]]></system-out>
   </testcase>
   <testcase name="testDeletePlante" classname="com.epf.Testcontroller.PlanteControllerTest" time="0.01">
-    <system-out><![CDATA[12:28:17.125 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
+    <system-out><![CDATA[12:50:14.740 [main] DEBUG _org.springframework.web.servlet.HandlerMapping.Mappings - 
 	c.e.c.PlanteController:
-	{GET [/plantes/{id}]}: getPlanteById(int)
-	{GET [/plantes]}: getAllPlantes()
-	{POST [/plantes]}: createPlante(PlanteDTO)
 	{PUT [/plantes/{id}]}: updatePlante(int,PlanteDTO)
 	{DELETE [/plantes/{id}]}: deletePlante(int)
-12:28:17.125 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
-12:28:17.127 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
-12:28:17.127 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
-12:28:17.128 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
-12:28:17.128 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
-12:28:17.128 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
-12:28:17.128 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
-12:28:17.128 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@787178b1
-12:28:17.128 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@24a4e2c5
-12:28:17.128 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
-12:28:17.128 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
-12:28:17.128 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - DELETE "/plantes/1", parameters={}
-12:28:17.129 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#deletePlante(int)
-12:28:17.130 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
-12:28:17.130 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
-12:28:17.130 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
+	{GET [/plantes/{id}]}: getPlanteById(int)
+	{POST [/plantes]}: createPlante(PlanteDTO)
+	{GET [/plantes]}: getAllPlantes()
+12:50:14.740 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - 5 mappings in org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping
+12:50:14.742 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter - ControllerAdvice beans: 0 @ModelAttribute, 0 @InitBinder, 1 RequestBodyAdvice, 1 ResponseBodyAdvice
+12:50:14.742 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver - ControllerAdvice beans: 0 @ExceptionHandler, 1 ResponseBodyAdvice
+12:50:14.742 [main] INFO org.springframework.mock.web.MockServletContext - Initializing Spring TestDispatcherServlet ''
+12:50:14.742 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Initializing Servlet ''
+12:50:14.742 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected AcceptHeaderLocaleResolver
+12:50:14.742 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected FixedThemeResolver
+12:50:14.742 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.view.DefaultRequestToViewNameTranslator@27e44e9c
+12:50:14.742 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Detected org.springframework.web.servlet.support.SessionFlashMapManager@2f09e6b2
+12:50:14.742 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - enableLoggingRequestDetails='false': request parameters and headers will be masked to prevent unsafe logging of potentially sensitive data
+12:50:14.742 [main] INFO org.springframework.test.web.servlet.TestDispatcherServlet - Completed initialization in 0 ms
+12:50:14.743 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - DELETE "/plantes/1", parameters={}
+12:50:14.743 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping - Mapped to com.epf.controller.PlanteController#deletePlante(int)
+12:50:14.744 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Using 'application/json', given [*/*] and supported [application/json, application/*+json]
+12:50:14.744 [main] DEBUG org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor - Nothing to write: null body
+12:50:14.744 [main] DEBUG org.springframework.test.web.servlet.TestDispatcherServlet - Completed 200 OK
 ]]></system-out>
   </testcase>
 </testsuite>

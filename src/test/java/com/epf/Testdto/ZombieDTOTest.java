@@ -1,7 +1,9 @@
 package com.epf.Testdto;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import org.junit.jupiter.api.Test;
 
 import com.epf.dto.ZombieDTO;
 import com.epf.model.Zombie;
