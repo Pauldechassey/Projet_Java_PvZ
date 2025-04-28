@@ -6,10 +6,10 @@ import org.junit.Test;
 import com.epf.dto.ZombieDTO;
 import com.epf.model.Zombie;
 
-class ZombieDTOTest {
+public class ZombieDTOTest {
 
     @Test
-    void testDTOFromEntity() {
+    public void testDTOFromEntity() {
         Zombie zombie = new Zombie();
         zombie.setId_zombie(1);
         zombie.setNom("Basic Zombie");
@@ -33,7 +33,7 @@ class ZombieDTOTest {
     }
 
     @Test
-    void testEntityFromDTO() {
+    public void testEntityFromDTO() {
         ZombieDTO dto = new ZombieDTO();
         dto.setId_zombie(1);
         dto.setNom("Basic Zombie");

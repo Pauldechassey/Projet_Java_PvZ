@@ -6,10 +6,10 @@ import org.junit.Test;
 import com.epf.dto.MapDTO;
 import com.epf.model.Map;
 
-class MapDTOTest {
+public class MapDTOTest {
 
     @Test
-    void testDTOFromEntity() {
+    public void testDTOFromEntity() {
         Map map = new Map();
         map.setId_map(1);
         map.setLigne(5);
@@ -25,7 +25,7 @@ class MapDTOTest {
     }
 
     @Test
-    void testEntityFromDTO() {
+    public void testEntityFromDTO() {
         MapDTO dto = new MapDTO();
         dto.setId_map(1);
         dto.setLigne(5);

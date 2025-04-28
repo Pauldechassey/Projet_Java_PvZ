@@ -3,17 +3,17 @@ package com.epf.Testdao;
 import java.util.Arrays;
 import java.util.List;
 
-import static org.junit.Assert.assertEquals;
-import org.junit.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -24,7 +24,7 @@ import com.epf.dao.ZombieDAO;
 import com.epf.model.Zombie;
 
 @ExtendWith(MockitoExtension.class)
-public class TestZombieDAO {
+class TestZombieDAO {
 
     @Mock
     private JdbcTemplate jdbcTemplate;
@@ -48,10 +48,8 @@ public class TestZombieDAO {
     }
 
     @Test
-    public void testFindAll() {
-        @SuppressWarnings("unchecked")
-        RowMapper<Zombie> zombieRowMapper = (RowMapper<Zombie>) mock(RowMapper.class);
-        when(jdbcTemplate.query(anyString(), eq(zombieRowMapper)))
+    void testFindAll() {
+        when(jdbcTemplate.query(anyString(), any(RowMapper.class)))
             .thenReturn(Arrays.asList(testZombie));
 
         List<Zombie> result = zombieDAO.findAll();
@@ -62,20 +60,33 @@ public class TestZombieDAO {
     }
 
     @Test
-    public void testFindById() {
-        @SuppressWarnings("unchecked")
-        RowMapper<Zombie> zombieRowMapper = (RowMapper<Zombie>) mock(RowMapper.class);
-        when(jdbcTemplate.queryForObject(anyString(), eq(zombieRowMapper), eq(1)))
-            .thenReturn(testZombie);
+    void testFindById() {
+        when(jdbcTemplate.queryForObject(
+            eq("SELECT * FROM zombie WHERE id_zombie = ?"), 
+            any(RowMapper.class), 
+            eq(1)))
+        .thenReturn(testZombie);
 
         Zombie result = zombieDAO.findById(1);
         
         assertNotNull(result);
         assertEquals(testZombie.getId_zombie(), result.getId_zombie());
+        assertEquals(testZombie.getNom(), result.getNom());
     }
 
     @Test
-    public void testCreate() {
+    void testCreate() {
+        when(jdbcTemplate.update(
+            eq("INSERT INTO zombie (nom, point_de_vie, attaque_par_seconde, degat_attaque, vitesse_de_deplacement, chemin_image, id_map) VALUES (?, ?, ?, ?, ?, ?, ?)"),
+            eq(testZombie.getNom()),
+            eq(testZombie.getPoint_de_vie()),
+            eq(testZombie.getAttaque_par_seconde()),
+            eq(testZombie.getDegat_attaque()),
+            eq(testZombie.getVitesse_de_deplacement()),
+            eq(testZombie.getChemin_image()),
+            eq(testZombie.getId_map())))
+        .thenReturn(1);
+
         zombieDAO.create(testZombie);
 
         verify(jdbcTemplate).update(anyString(), 
@@ -89,7 +100,18 @@ public class TestZombieDAO {
     }
 
     @Test
-    public void testUpdate() {
+    void testUpdate() {
+        when(jdbcTemplate.update(anyString(),
+            eq(testZombie.getNom()),
+            eq(testZombie.getPoint_de_vie()),
+            eq(testZombie.getAttaque_par_seconde()),
+            eq(testZombie.getDegat_attaque()),
+            eq(testZombie.getVitesse_de_deplacement()),
+            eq(testZombie.getChemin_image()),
+            eq(testZombie.getId_map()),
+            eq(testZombie.getId_zombie())))
+        .thenReturn(1);
+
         zombieDAO.update(testZombie);
 
         verify(jdbcTemplate).update(anyString(),
@@ -104,7 +126,12 @@ public class TestZombieDAO {
     }
 
     @Test
-    public void testDelete() {
+    void testDelete() {
+        when(jdbcTemplate.update(
+            eq("DELETE FROM zombie WHERE id_zombie = ?"), 
+            eq(1)))
+        .thenReturn(1);
+
         zombieDAO.delete(1);
 
         verify(jdbcTemplate).update(anyString(), eq(1));

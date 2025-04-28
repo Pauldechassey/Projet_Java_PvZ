@@ -14,7 +14,6 @@ import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
-import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -48,10 +47,10 @@ public class TestPlanteDAO {
 
     @Test
     public void testFindAll() {
-        @SuppressWarnings("unchecked")
-        RowMapper<Plante> planteRowMapper = (RowMapper<Plante>) mock(RowMapper.class);
-        when(jdbcTemplate.query(anyString(), eq(planteRowMapper)))
-            .thenReturn(Arrays.asList(testPlante));
+        when(jdbcTemplate.query(
+            eq("SELECT * FROM plante"), 
+            any(RowMapper.class)))
+        .thenReturn(Arrays.asList(testPlante));
 
         List<Plante> result = planteDAO.findAll();
         
@@ -63,9 +62,11 @@ public class TestPlanteDAO {
 
     @Test
     public void testFindById() {
-        @SuppressWarnings("unchecked")
-        RowMapper<Plante> planteRowMapper = (RowMapper<Plante>) mock(RowMapper.class);
-        when(jdbcTemplate.queryForObject(anyString(), eq(planteRowMapper), eq(1))).thenReturn(testPlante);
+        when(jdbcTemplate.queryForObject(
+            eq("SELECT * FROM plante WHERE id_plante = ?"),
+            any(RowMapper.class),
+            eq(1)))
+        .thenReturn(testPlante);
 
         Plante result = planteDAO.findById(1);
         

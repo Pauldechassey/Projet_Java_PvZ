@@ -12,8 +12,10 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.anyString;
 import static org.mockito.ArgumentMatchers.eq;
+import org.mockito.InOrder;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
+import static org.mockito.Mockito.inOrder;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
@@ -96,11 +98,22 @@ public class TestMapDAO {
 
     @Test
     public void testDelete() {
+        
         when(jdbcTemplate.update(anyString(), eq(1)))
-            .thenReturn(1);
+            .thenReturn(1); 
         
         mapDAO.delete(1);
 
-        verify(jdbcTemplate, times(1)).update(anyString(), eq(1));
+        InOrder inOrder = inOrder(jdbcTemplate);
+        
+        inOrder.verify(jdbcTemplate).update(
+            eq("DELETE FROM zombie WHERE id_map = ?"), 
+            eq(1)
+        );
+        
+        inOrder.verify(jdbcTemplate).update(
+            eq("DELETE FROM map WHERE id_map = ?"), 
+            eq(1)
+        );
     }
 }

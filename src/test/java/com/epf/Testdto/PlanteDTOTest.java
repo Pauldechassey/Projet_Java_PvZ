@@ -7,10 +7,10 @@ import com.epf.dto.PlanteDTO;
 import com.epf.model.Effet;
 import com.epf.model.Plante;
 
-class PlanteDTOTest {
+public class PlanteDTOTest {
 
     @Test
-    void testDTOFromEntity() {
+    public  void testDTOFromEntity() {
         Plante plante = new Plante();
         plante.setNom("NORMAL");  // Update test to expect uppercase
 
@@ -19,7 +19,7 @@ class PlanteDTOTest {
     }
 
     @Test
-    void testEntityFromDTO() {
+    public void testEntityFromDTO() {
         PlanteDTO dto = new PlanteDTO();
         dto.setId(1);
         dto.setNom("Peashooter");
