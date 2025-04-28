@@ -1,9 +1,11 @@
 com\epf\dto\PlanteDTO.class
+com\epf\config\WebAppInitializer.class
 com\epf\model\Plante.class
-com\epf\SpringBootApp.class
+com\epf\config\DatabaseConfig.class
 com\epf\dao\ZombieDAO.class
 com\epf\config\WebConfig.class
 com\epf\controller\MapController.class
+com\epf\exception\DaoException.class
 com\epf\model\Map.class
 com\epf\controller\PlanteController.class
 com\epf\dao\MapDAO.class

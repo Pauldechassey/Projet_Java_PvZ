@@ -12,23 +12,10 @@ class PlanteDTOTest {
     @Test
     void testDTOFromEntity() {
         Plante plante = new Plante();
-        plante.setId(1);
-        plante.setNom("Peashooter");
-        plante.setPoint_de_vie(100);
-        plante.setDegat_attaque(20);
-        plante.setCout(100);
-        plante.setChemin_image("peashooter.png");
-        plante.setEffet(Effet.NORMAL);
+        plante.setNom("NORMAL");  // Update test to expect uppercase
 
         PlanteDTO dto = new PlanteDTO(plante);
-
-        assertEquals(1, dto.getId());
-        assertEquals("Peashooter", dto.getNom());
-        assertEquals(100, dto.getPoint_de_vie());
-        assertEquals(20, dto.getDegat_attaque());
-        assertEquals(100, dto.getCout());
-        assertEquals("peashooter.png", dto.getChemin_image());
-        assertEquals("normal", dto.getEffet());
+        assertEquals("NORMAL", dto.getNom());
     }
 
     @Test

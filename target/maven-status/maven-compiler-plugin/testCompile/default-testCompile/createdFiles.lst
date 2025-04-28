@@ -1,5 +1,12 @@
+com\epf\Testdto\PlanteDTOTest.class
 com\epf\Testdao\TestZombieDAO.class
 com\epf\config\DatabaseConnectionTest.class
 com\epf\config\TestConfig.class
+com\epf\config\TestDatabaseConfig.class
+com\epf\Testcontroller\MapControllerTest.class
 com\epf\Testdao\TestMapDAO.class
+com\epf\Testcontroller\PlanteControllerTest.class
+com\epf\Testdto\MapDTOTest.class
+com\epf\Testcontroller\ZombieControllerTest.class
+com\epf\Testdto\ZombieDTOTest.class
 com\epf\Testdao\TestPlanteDAO.class
