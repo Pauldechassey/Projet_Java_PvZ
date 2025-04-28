@@ -34,7 +34,7 @@ public class MapController {
     }
 
     @GetMapping("/{id}")
-    public MapDTO getMapById(@PathVariable int id) {
+    public MapDTO getMapById(@PathVariable("id")  int id) {
         return new MapDTO(mapService.findById(id));
     }
 
@@ -44,14 +44,14 @@ public class MapController {
     }
 
     @PutMapping("/{id}")
-    public void updateMap(@PathVariable int id, @RequestBody MapDTO mapDTO) {
+    public void updateMap(@PathVariable("id") int id, @RequestBody MapDTO mapDTO) {
         Map map = mapDTO.toEntity();
         map.setId_map(id);
         mapService.update(map);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteMap(@PathVariable int id) {
+    public void deleteMap(@PathVariable("id")  int id) {
         mapService.delete(id);
     }
 }

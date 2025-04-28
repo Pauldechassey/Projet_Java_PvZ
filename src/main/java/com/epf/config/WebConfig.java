@@ -1,26 +1,31 @@
 package com.epf.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
-@Configuration
-public class WebConfig implements WebMvcConfigurer {
+import io.micrometer.common.lang.NonNull;
 
+@Configuration
+@EnableWebMvc
+public class WebConfig implements WebMvcConfigurer {
+    
     @Override
     public void addCorsMappings(@NonNull CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173")
-                .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
-                .allowedHeaders("*")
-                .allowCredentials(true);
+            .allowedOriginPatterns("*") 
+            .allowedMethods("HEAD", "GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS")
+            .allowedHeaders("*")
+            .exposedHeaders("access-control-allow-origin", "access-control-allow-headers", "access-control-allow-methods")
+            .maxAge(3600)  
+            .allowCredentials(true);
     }
 
     @Override
     public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/images/**")
-                .addResourceLocations("/webapp/images/");
-    }
+            .addResourceLocations("/images/");
+}
 }

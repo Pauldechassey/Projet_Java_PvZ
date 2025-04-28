@@ -1,14 +1,15 @@
 package com.epf.config;
 
 import javax.sql.DataSource;
-
-import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
+import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
-@TestConfiguration
+@Configuration
+@EnableWebMvc
 @ComponentScan(basePackages = "com.epf")
 public class TestConfig {
 

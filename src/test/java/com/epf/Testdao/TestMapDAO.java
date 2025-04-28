@@ -1,62 +1,119 @@
 package com.epf.Testdao;
 
+import java.util.Arrays;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
+import org.junit.jupiter.api.extension.ExtendWith;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.ArgumentMatchers.anyString;
+import static org.mockito.ArgumentMatchers.eq;
+import org.mockito.InOrder;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import static org.mockito.Mockito.inOrder;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
+import org.mockito.junit.jupiter.MockitoExtension;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
-import com.epf.config.TestConfig;
 import com.epf.dao.MapDAO;
 import com.epf.model.Map;
 
-@SpringBootTest
-@ContextConfiguration(classes = TestConfig.class)
+@ExtendWith(MockitoExtension.class)
 public class TestMapDAO {
-    
-    @Autowired
+
+    @Mock
+    private JdbcTemplate jdbcTemplate;
+
+    @InjectMocks
     private MapDAO mapDAO;
+
+    private Map testMap;
+
+    @BeforeEach
+    public void setUp() {
+        testMap = new Map();
+        testMap.setId_map(1);
+        testMap.setLigne(5);
+        testMap.setColonne(8);
+        testMap.setChemin_image("test.png");
+    }
 
     @Test
     public void testFindAll() {
-        List<Map> maps = mapDAO.findAll();
-        assertNotNull(maps);
+        when(jdbcTemplate.query(anyString(), any(RowMapper.class)))
+            .thenReturn(Arrays.asList(testMap));
+
+        List<Map> result = mapDAO.findAll();
+        
+        assertNotNull(result);
+        assertFalse(result.isEmpty());
+        assertEquals(testMap.getId_map(), result.get(0).getId_map());
     }
 
     @Test
     public void testFindById() {
-        Map map = mapDAO.findById(1);
-        assertNotNull(map);
+        when(jdbcTemplate.queryForObject(anyString(), any(RowMapper.class), eq(1)))
+            .thenReturn(testMap);
+
+        Map result = mapDAO.findById(1);
+        
+        assertNotNull(result);
+        assertEquals(testMap.getId_map(), result.getId_map());
     }
 
     @Test
     public void testCreate() {
-        Map map = new Map();
-        map.setLigne(10);
-        map.setColonne(8);
-        map.setChemin_image("test_map.png");
+        when(jdbcTemplate.update(anyString(), any(), any(), any()))
+            .thenReturn(1);
+        
+        mapDAO.create(testMap);
 
-        mapDAO.create(map);
+        verify(jdbcTemplate, times(1)).update(anyString(), 
+            eq(testMap.getLigne()),
+            eq(testMap.getColonne()),
+            eq(testMap.getChemin_image()));
     }
 
     @Test
     public void testUpdate() {
-        Map map = mapDAO.findById(1);
-        map.setLigne(12);
-        mapDAO.update(map);
+        when(jdbcTemplate.update(anyString(), any(), any(), any(), any()))
+            .thenReturn(1);
+
+        mapDAO.update(testMap);
+
+        verify(jdbcTemplate).update(anyString(),
+            eq(testMap.getLigne()),
+            eq(testMap.getColonne()),
+            eq(testMap.getChemin_image()),
+            eq(testMap.getId_map()));
     }
 
     @Test
     public void testDelete() {
+        
+        when(jdbcTemplate.update(anyString(), eq(1)))
+            .thenReturn(1); 
+        
         mapDAO.delete(1);
-    }
 
-    @Test
-    public void testDatabaseConnection() {
-        // Simple query to verify connection
-        List<Map> maps = mapDAO.findAll();
-        System.out.println("Successfully connected to database and found " + maps.size() + " maps");
+        InOrder inOrder = inOrder(jdbcTemplate);
+        
+        inOrder.verify(jdbcTemplate).update(
+            eq("DELETE FROM zombie WHERE id_map = ?"), 
+            eq(1)
+        );
+        
+        inOrder.verify(jdbcTemplate).update(
+            eq("DELETE FROM map WHERE id_map = ?"), 
+            eq(1)
+        );
     }
 }

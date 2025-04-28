@@ -1,10 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: com.epf.Testdao.TestMapDAO
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 2.845 s <<< FAILURE! - in com.epf.Testdao.TestMapDAO
-testDelete  Time elapsed: 0.637 s  <<< ERROR!
-org.springframework.dao.DataIntegrityViolationException: PreparedStatementCallback; SQL [DELETE FROM map WHERE id_map = ?]; Cannot delete or update a parent row: a foreign key constraint fails (`pvz`.`zombie`, CONSTRAINT `fk_zombie_map` FOREIGN KEY (`id_map`) REFERENCES `map` (`id_map`)); nested exception is java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`pvz`.`zombie`, CONSTRAINT `fk_zombie_map` FOREIGN KEY (`id_map`) REFERENCES `map` (`id_map`))
-	at com.epf.Testdao.TestMapDAO.testDelete(TestMapDAO.java:53)
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`pvz`.`zombie`, CONSTRAINT `fk_zombie_map` FOREIGN KEY (`id_map`) REFERENCES `map` (`id_map`))
-	at com.epf.Testdao.TestMapDAO.testDelete(TestMapDAO.java:53)
-
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.263 s -- in com.epf.Testdao.TestMapDAO
