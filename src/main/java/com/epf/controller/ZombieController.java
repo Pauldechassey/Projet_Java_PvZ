@@ -35,7 +35,7 @@ public class ZombieController {
     }
 
     @GetMapping("/{id}")
-    public ResponseEntity<ZombieDTO> getZombieById(@PathVariable int id) {
+    public ResponseEntity<ZombieDTO> getZombieById(@PathVariable("id") int id) { // Ajout explicite du nom "id"
         Zombie zombie = zombieService.findById(id);
         ZombieDTO zombieDTO = new ZombieDTO(zombie);
         return ResponseEntity.ok(zombieDTO);
@@ -48,19 +48,19 @@ public class ZombieController {
     }
 
     @PutMapping("/{id}")
-    public void updateZombie(@PathVariable int id, @RequestBody ZombieDTO zombieDTO) {
+    public void updateZombie(@PathVariable("id") int id, @RequestBody ZombieDTO zombieDTO) { 
         Zombie zombie = zombieDTO.toEntity();
         zombie.setId_zombie(id);
         zombieService.update(zombie);
     }
 
     @DeleteMapping("/{id}")
-    public void deleteZombie(@PathVariable int id) {
+    public void deleteZombie(@PathVariable("id") int id) { 
         zombieService.delete(id);
     }
 
     @GetMapping("/map/{mapId}")
-    public List<ZombieDTO> getZombiesByMap(@PathVariable int mapId) {
+    public List<ZombieDTO> getZombiesByMap(@PathVariable("mapId") int mapId) {
         return zombieService.findByMapId(mapId).stream()
             .map(ZombieDTO::new)
             .collect(Collectors.toList());

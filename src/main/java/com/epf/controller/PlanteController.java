@@ -34,7 +34,7 @@ public class PlanteController {
     }
 
     @GetMapping("/{id}")
-    public PlanteDTO getPlanteById(@PathVariable int id) {
+    public PlanteDTO getPlanteById(@PathVariable("id") int id) { 
         return new PlanteDTO(planteService.findById(id));
     }
 
@@ -44,14 +44,14 @@ public class PlanteController {
     }
 
     @PutMapping("/{id}")
-    public void updatePlante(@PathVariable int id, @RequestBody PlanteDTO planteDTO) {
+    public void updatePlante(@PathVariable("id") int id, @RequestBody PlanteDTO planteDTO) { 
         Plante plante = planteDTO.toEntity();
         plante.setId(id);
         planteService.update(plante);
     }
 
     @DeleteMapping("/{id}")
-    public void deletePlante(@PathVariable int id) {
+    public void deletePlante(@PathVariable("id") int id) { 
         planteService.delete(id);
     }
 }
